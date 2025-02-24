@@ -18,8 +18,7 @@ jobs:
   # This workflow contains a single job called "build"
   build:
     # The type of runner that the job will run on
-    runs-on:
-    #.\tosca_execution_client.ps1 -toscaServerUrl " https://dextosca01.dexcom.dexcominc.com" -projectName "Tosca_dev" -events '["Stelo_Smoke"]' -clientId "wtWxQisS9UqTRNmgr6mw7g" -clientSecret "T-J2H9BOM0-QPZ1SHcoHcQfNqBWPeMCESrqPNICIU1fg"
+    runs-on: .\tosca_execution_client.ps1 -toscaServerUrl " https://dextosca01.dexcom.dexcominc.com" -projectName "Tosca_dev" -events '["Stelo_Smoke"]' -clientId "wtWxQisS9UqTRNmgr6mw7g" -clientSecret "T-J2H9BOM0-QPZ1SHcoHcQfNqBWPeMCESrqPNICIU1fg"
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
