@@ -1,7 +1,7 @@
 # This is a basic workflow to help you get started with Actions
-
+ 
 name: CI
-
+ 
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
@@ -9,28 +9,22 @@ on:
     branches: [ "main" ]
   pull_request:
     branches: [ "main" ]
-
+ 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
-
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+  # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
+  Test:
     # The type of runner that the job will run on
-    runs-on: .\tosca_execution_client.ps1 -toscaServerUrl " https://dextosca01.dexcom.dexcominc.com" -projectName "Tosca_dev" -events '["Stelo_Smoke"]' -clientId "wtWxQisS9UqTRNmgr6mw7g" -clientSecret "T-J2H9BOM0-QPZ1SHcoHcQfNqBWPeMCESrqPNICIU1fg"
-
+    # needs: bash-script
+    runs-on: self-hosted
+ 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v4
-
-      # Runs a single command using the runners shell
-      - name: Run a one-line script
-        run: echo Hello, world!
-
-      # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      # Runs a set of commands for windows 
+      - name: Checkout code
+        uses: actions/checkout@v2
+        - name: Execute Tosca Client
         run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+          .\tosca_execution_client.ps1 -toscaServerUrl " https://dextosca01.dexcom.dexcominc.com" -projectName "Tosca_dev" -events '["Stelo_Smoke"]' -clientId "wtWxQisS9UqTRNmgr6mw7g" -clientSecret "T-J2H9BOM0-QPZ1SHcoHcQfNqBWPeMCESrqPNICIU1fg"
+        # shell: pwsh
