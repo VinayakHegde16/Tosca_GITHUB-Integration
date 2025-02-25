@@ -26,5 +26,5 @@ jobs:
         uses: actions/checkout@v2
         - name: Execute Tosca Client
         run: |
-          .\tosca_execution_client.ps1 -toscaServerUrl " https://dextosca01.dexcom.dexcominc.com" -projectName "Tosca_dev" -events '["Stelo_Smoke"]' -clientId "wtWxQisS9UqTRNmgr6mw7g" -clientSecret "T-J2H9BOM0-QPZ1SHcoHcQfNqBWPeMCESrqPNICIU1fg"
+         .\tosca_execution_client.ps1 -toscaServerUrl " https://dextosca01.dexcom.dexcominc.com" -projectName "Tosca_dev" -events '["Stelo_Smoke"]' -clientId "wtWxQisS9UqTRNmgr6mw7g" -clientSecret "T-J2H9BOM0-QPZ1SHcoHcQfNqBWPeMCESrqPNICIU1fg"
         # shell: pwsh
