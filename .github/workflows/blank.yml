@@ -27,5 +27,5 @@ jobs:
  
       - name: Execute Tosca Client
         run: |
-          .\tosca_execution_client.ps1 -toscaServerUrl "https://dextosca01.dexcom.dexcominc.com" -projectName "Tosca_dev" -events '["Stelo_Smoke"]' -clientId "A_OFT_8gdkCQr9PoL_7fQw" -clientSecret "WoZJK4BPEEWFiU1DUK1zmgMZJNToUtOkeTtHTUhtVfgg"
+          .\tosca_execution_client.ps1 -toscaServerUrl "https://dextosca01.dexcom.dexcominc.com" -projectName "Tosca_dev" -events '["Stelo_Smoke"]' -clientId "wtWxQisS9UqTRNmgr6mw7g" -clientSecret "T-J2H9BOM0-QPZ1SHcoHcQfNqBWPeMCESrqPNICIU1fg"
         # shell: pwsh
